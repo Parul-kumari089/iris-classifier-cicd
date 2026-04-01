@@ -39,8 +39,8 @@ jobs:
 
     - name: Deploy to Render  # Step to trigger Render deployment via API
       env:
-        RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}  # Use GitHub secret
-        RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}  # Use GitHub secret
+        RENDER_API_KEY: ${{ secrets.rnd_N4mMvleNZvrt3yT7MTCCr6FuF28t }}  # Use GitHub secret
+        RENDER_SERVICE_ID: ${{ secrets.srv-d76b6uruibrs73bhrcjg  }}  # Use GitHub secret
       run: |
         curl -X POST \
         -H "Authorization: Bearer $RENDER_API_KEY" \
