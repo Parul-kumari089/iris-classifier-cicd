@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import joblib
 import numpy as np
+from flask import render_template
  
 # Load the trained model
 model = joblib.load('iris_model.pkl')
@@ -10,7 +11,7 @@ app = Flask(__name__)
  
 @app.route("/")
 def home():
-    return "Welcome to the Iris Prediction API! Use the /predict endpoint to get predictions."
+    return render_template("index.html")
  
 @app.route("/predict", methods=["POST"])
 def predict():
